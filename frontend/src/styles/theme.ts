@@ -1,0 +1,332 @@
+import { extendTheme } from '@chakra-ui/react';
+import { customComponents } from './components';
+
+export const theme = extendTheme({
+  breakpoints: {
+    sm: '320px',
+    cp: '375px',
+    tl: '760px',
+    md: '768px',
+    lg: '960px',
+    xl: '1200px',
+    '2xl': '1536px',
+  },
+  colors: {
+    primary: {
+      lightest: '#F5CCDE',
+      lighter: '#EB99BC',
+      light: '#E2669B',
+      base: '#CE0058',
+      dark: '#A50046',
+      darkest: '#7C0035',
+    },
+    secondary: {
+      lightest: '#DCD6E9',
+      lighter: '#B9ADD2',
+      light: '#9785BC',
+      base: '#51338F',
+      darkest: '#311F56',
+    },
+    tertiary: {
+      lightest: '#FEF0D8',
+      lighter: '#FEE0B1',
+      light: '#FDD18B',
+      base: '#FCB23D',
+      darkest: '#CA8E31',
+    },
+    content: {
+      lightest: '#F2F2F2',
+      lighter: '#928F9C',
+      light: '#7A7882',
+      base: '#65636B',
+      dark: '#3B3B40',
+      darker: '#1C1B1F',
+      darkest: '#070708',
+    },
+    neutral: {
+      white: '#FFFFFF',
+      lightest: '#F7F9FA',
+      lighter: '#F2F4F5',
+      light: '#E3E5E5',
+      base: '#CDCFD0',
+      dark: '#979C9E',
+    },
+    success: {
+      lightest: '#E9FFF5',
+      base: '#5AEB9C',
+      dark: '#245C3E',
+    },
+    alert: {
+      lightest: '#FFF9E1',
+      base: '#F7DD72',
+      dark: '#774C00',
+    },
+    error: {
+      lightest: '#F3D1D4',
+      base: '#B10017',
+      dark: '#4E0013',
+    },
+    heading: {
+      '900': '#000000',
+    },
+    solid: {
+      '100': '#FFFFFF',
+      primary: '#6982BF',
+      white: '#FFFFFF',
+    },
+  },
+  fonts: {
+    body: 'Avenir-Book',
+    heading: 'Avenir-Bold',
+  },
+  fontWeight: {
+    regular: 400,
+    medium: 600,
+    bold: 700,
+  },
+  textStyles: {
+    headingXXXG: {
+      fontSize: '96px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '110%',
+    },
+    headingXXG: {
+      fontSize: '80px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '110%',
+    },
+    headingXXXL: {
+      fontSize: '64px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '110%',
+    },
+    headingXXL: {
+      fontSize: '48px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '110%',
+    },
+    headingXL: {
+      fontSize: '32px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '120%',
+    },
+    headingLG: {
+      fontSize: '40px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '120%',
+    },
+    headingMD: {
+      fontSize: '28px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    headingSM: {
+      fontSize: '24px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    headingXS: {
+      fontSize: '20px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    headingXXS: {
+      fontSize: '16px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    subtitleLargeTiny: {
+      fontSize: '32px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '110%',
+    },
+    subtitleLargeTight: {
+      fontSize: '32px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '120%',
+    },
+    subtitleLargeMid: {
+      fontSize: '32px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    subtitleBaseTiny: {
+      fontSize: '28px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '110%',
+    },
+    subtitleBaseTight: {
+      fontSize: '28px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '120%',
+    },
+    subtitleBaseMid: {
+      fontSize: '28px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    subtitleSmallTiny: {
+      fontSize: '24px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '110%',
+    },
+    subtitleSmallTight: {
+      fontSize: '24px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '120%',
+    },
+    subtitleSmallMid: {
+      fontSize: '24px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    paragraphLargeMid: {
+      fontSize: '20px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    paragraphLargeNormal: {
+      fontSize: '20px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '140%',
+    },
+    paragraphLargeHight: {
+      fontSize: '20px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '150%',
+    },
+    paragraphBaseMid: {
+      fontSize: '16px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    paragraphBaseNormal: {
+      fontSize: '16px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '140%',
+    },
+    paragraphBaseHight: {
+      fontSize: '16px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '150%',
+    },
+    paragraphSmallMid: {
+      fontSize: '14px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    paragraphSmallNormal: {
+      fontSize: '14px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '140%',
+    },
+    paragraphSmallHight: {
+      fontSize: '14px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '150%',
+    },
+    captionLargeMid: {
+      fontSize: '14px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    captionLargeNormal: {
+      fontSize: '14px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '140%',
+    },
+    captionLargeHight: {
+      fontSize: '14px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '150%',
+    },
+    captionBaseMid: {
+      fontSize: '12px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '130%',
+    },
+    captionBaseNormal: {
+      fontSize: '12px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '140%',
+    },
+    captionBaseHight: {
+      fontSize: '12px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '150%',
+    },
+    tagNormal: {
+      fontSize: '12px',
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '110%',
+    },
+    interactionButtonHigh: {
+      fontSize: ['14px', '16px'],
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '140%',
+    },
+    interactionLinkHigh: {
+      fontSize: ['14px', '16px'],
+      fontFamily: 'Avenir-Book',
+      fontWeight: 700,
+      lineHeight: '140%',
+    },
+    medium: {
+      fontFamily: 'Avenir-Medium',
+    },
+  },
+
+  styles: {
+    global: {
+      'html, body': {
+        height: '100%',
+      },
+      'a:hover': {
+        textDecoration: 'none!important',
+      },
+      strong: {
+        fontFamily: 'Avenir-Black',
+      },
+      b: {
+        fontFamily: 'Avenir-Roman',
+      },
+    },
+  },
+  components: customComponents,
+});

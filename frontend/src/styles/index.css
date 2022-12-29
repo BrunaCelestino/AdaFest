@@ -1,0 +1,58 @@
+@font-face {
+  font-family: Avenir-Book;
+
+  src: url('../../public/fonts/AvenirLTStd-Book.otf');
+}
+
+
+.scroll-custom::-webkit-scrollbar-track {
+  background-color: 'white';
+}
+.scroll-custom::-webkit-scrollbar {
+  width: 4px;
+}
+.scroll-custom::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #979c9e;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb:hover {
+  background: #979c9e;
+}
+
+.scroll-ghost::-webkit-scrollbar-track {
+  background-color: 'transparent';
+}
+.scroll-ghost::-webkit-scrollbar {
+  width: 4px;
+}
+.scroll-ghost::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: 'transparent';
+}
+
+.scroll-ghost::-webkit-scrollbar-thumb:hover {
+  background: 'transparent';
+}
+
+/* .swiper-pagination-bullet-active {
+  background-color: #f5ccde !important;
+}
+
+.swiper {
+  background-color: #ce0058 !important;
+}*/
+.header {
+  position: fixed;
+  top:0;
+ 
+}
+.swiper-white {
+  /* background-color: white !important; */
+  position: relative !important;
+  
+} 
+
+html::-webkit-scrollbar {
+  display: none;
+}
