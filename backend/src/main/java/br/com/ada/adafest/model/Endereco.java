@@ -1,4 +1,4 @@
-package br.com.ada.adaflix.model;
+package br.com.ada.adafest.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,6 +15,7 @@ public class Endereco {
     private String cep;
     private String logradouro;
     private String numero;
+    private String bairro;
     private String cidade;
     private String estado;
 
@@ -66,5 +67,13 @@ public class Endereco {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 }

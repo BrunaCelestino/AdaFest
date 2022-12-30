@@ -1,17 +1,33 @@
 import { Flex, Image, Text } from "@chakra-ui/react"
+import { useCompanies } from "../../api/companies"
+import { IEmpresa } from "../../api/interfaces/events"
 import { DynamicIcon } from "../DynamicIcon"
 
 export const CompanyCards =() => {
     const companies = ["b3", "bradesco", "ada"]
+
+    const data = useCompanies()
+
+    let logos: any[] = []
+    if(!data.isLoadingCompanies) {
+        logos = (data.companies?.data as IEmpresa[]).map((data) =>  data.logo)
+   
+    }
+
+
     return (
     <Flex p="24px" justifyContent={"space-between"} gap="24px" direction="column" mb="48px">
         <Flex justifyContent="center" > <Text fontSize="32px">Empresas Parceiras</Text></Flex>
        
-       <Flex justifyContent={"space-between"} gap="16px">
-        {companies.map((data, index) => (
-            <Flex key={index}    h="150px" cursor="pointer">
-            <Image objectFit="fill"  w="300px"  borderRadius="16px" src={`../companies/${data}.png`} />
-            </Flex>
+       <Flex justifyContent={"space-between"} gap="16px" >
+        {logos.slice(2,logos.length - 1).map((data, index) => (
+            <>
+           {data !== null && 
+            <Flex key={index}  border="1px solid" borderRadius="16px"  h="150px" cursor="pointer" >
+                 <Image objectFit="fill"  w="300px"  borderRadius="16px" src={`${data}`} />
+            
+            </Flex>}
+            </>
         ))}
         <Flex border="1px solid" w="300px" h="150px" borderRadius="16px" justifyContent="center" direction="column" cursor="pointer">
             <Flex alignItems="center" justifyContent="center"  px="48px">

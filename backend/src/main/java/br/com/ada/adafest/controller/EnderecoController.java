@@ -1,7 +1,7 @@
-package br.com.ada.adaflix.controller;
+package br.com.ada.adafest.controller;
 
-import br.com.ada.adaflix.model.Endereco;
-import br.com.ada.adaflix.service.EnderecoService;
+import br.com.ada.adafest.model.Endereco;
+import br.com.ada.adafest.service.EnderecoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

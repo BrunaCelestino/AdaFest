@@ -4,12 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    TRANSACTIONAL_URL: process.env.TRANSACTIONAL_URL,
-    USER_URL: process.env.USER_URL,
-    CEP_URL: process.env.CEP_URL,
-    API_GATEWAY_URL: process.env.API_GATEWAY_URL,
-    API_GATEWAY_LOCAL: process.env.API_GATEWAY_LOCAL,
-    BACK_ENV: process.env.BACK_ENV,
+    BASE_URL: process.env.BASE_URL,
   },
   webpack(config) {
     config.module.rules.push({

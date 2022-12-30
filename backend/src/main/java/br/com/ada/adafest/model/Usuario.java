@@ -1,21 +1,25 @@
-package br.com.ada.adaflix.model;
+package br.com.ada.adafest.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
-@Table(name="Empresas")
-public class Empresa {
+@Table(name="Usuarios")
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String cnpj;
+    private LocalDate dataNascimento;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id")
     private Endereco endereco;
-    private String telefone;
     private String email;
+    private String senha;
+    private String telefone;
 
 
     public Long getId() {
@@ -34,12 +38,12 @@ public class Empresa {
         this.nome = nome;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public Endereco getEndereco() {
@@ -50,19 +54,27 @@ public class Empresa {
         this.endereco = endereco;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }

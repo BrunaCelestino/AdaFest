@@ -1,4 +1,4 @@
-package br.com.ada.adaflix.model;
+package br.com.ada.adafest.model;
 
 import jakarta.persistence.*;
 
@@ -22,6 +22,8 @@ public class Evento {
     private Long capacidade;
     private LocalDateTime inicioVendas;
     private LocalDate fimVendas;
+    private String tag;
+    private String banner;
     @ManyToOne
     @JoinColumn(name = "empresa_id")
     private Empresa empresa;
@@ -114,5 +116,21 @@ public class Evento {
 
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public String getBanner() {
+        return banner;
+    }
+
+    public void setBanner(String banner) {
+        this.banner = banner;
     }
 }

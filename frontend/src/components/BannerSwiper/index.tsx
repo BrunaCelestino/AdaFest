@@ -4,10 +4,18 @@ import 'swiper/css/pagination';
 import { Pagination, Virtual, Autoplay } from 'swiper';
 import { useState } from 'react';
 import { Flex, Image } from '@chakra-ui/react';
+import { IEvents } from '../../api/interfaces/events';
+import { useEvents } from '../../api/events';
 
 export const BannerSwiper = () => {
     const [swiperChange, setSwiperChange] = useState({});
-    const banners = ["music-fest", "rock-in-rio", "lollapalooza", "dj-party", "bloco-emo"]
+    const events = useEvents()
+    let banners: string[] = []
+    if(!events.isLoadingEvents) {
+        banners = (events.events?.data as IEvents[]).map((data) => data.banner)
+   
+    }
+    // const banners = ["music-fest", "rock-in-rio", "lollapalooza", "dj-party", "bloco-emo"]
     return (
         <Flex   position="relative">
             <Swiper
@@ -16,7 +24,7 @@ export const BannerSwiper = () => {
                 modules={[Autoplay]}
                 className="swiper-white"
                 slidesPerView={2}
-                spaceBetween={8}
+                spaceBetween={0}
                 pagination={{ clickable: true }}
                 onInit={(ev: any) => {
                     setSwiperChange(ev);
@@ -30,7 +38,7 @@ export const BannerSwiper = () => {
                         // onClick={() => router.push(`/movie/${data.id}`)}
                         >
                             <Flex justifyContent="center" cursor="pointer"  position="relative" h="400px">
-                                <Image objectPosition="relative" objectFit="fill" src={`../banners/${data}.png`} />
+                                <Image w="100%" objectFit="fill" src={`${data}`} />
                             </Flex>
                         </SwiperSlide>
                     )}

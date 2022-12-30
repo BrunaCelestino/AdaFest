@@ -1,7 +1,7 @@
-package br.com.ada.adaflix.controller;
+package br.com.ada.adafest.controller;
 
-import br.com.ada.adaflix.model.Usuario;
-import br.com.ada.adaflix.service.UsuarioService;
+import br.com.ada.adafest.model.Usuario;
+import br.com.ada.adafest.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

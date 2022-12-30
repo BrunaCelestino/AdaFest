@@ -1,7 +1,7 @@
-package br.com.ada.adaflix.service;
+package br.com.ada.adafest.service;
 
-import br.com.ada.adaflix.model.Empresa;
-import br.com.ada.adaflix.repository.EmpresaRepository;
+import br.com.ada.adafest.model.Empresa;
+import br.com.ada.adafest.repository.EmpresaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

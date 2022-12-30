@@ -1,7 +1,7 @@
-package br.com.ada.adaflix.controller;
+package br.com.ada.adafest.controller;
 
-import br.com.ada.adaflix.model.Empresa;
-import br.com.ada.adaflix.service.EmpresaService;
+import br.com.ada.adafest.model.Empresa;
+import br.com.ada.adafest.service.EmpresaService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

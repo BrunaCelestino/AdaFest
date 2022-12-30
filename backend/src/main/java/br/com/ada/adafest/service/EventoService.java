@@ -1,7 +1,7 @@
-package br.com.ada.adaflix.service;
+package br.com.ada.adafest.service;
 
-import br.com.ada.adaflix.model.Evento;
-import br.com.ada.adaflix.repository.EventoRepository;
+import br.com.ada.adafest.model.Evento;
+import br.com.ada.adafest.repository.EventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

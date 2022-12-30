@@ -1,34 +1,34 @@
 import { useQuery } from '@tanstack/react-query';
 import { axiosConnection } from './axios-instance';
-import { IMovies } from './interfaces/movies';
+import { IEvents } from './interfaces/events';
 
-export const getMovies = async () => {
+export const getEvents = async () => {
   try {
-    const data = await axiosConnection.get(`/movies`);
+    const data = await axiosConnection.get(`/eventos`);
     return {
       status: data.status,
-      message: 'Sucesso em obter filmes',
+      message: 'Sucesso em obter eventos',
       data: data.data,
     };
   } catch (error: any) {
     return {
       data: [],
-      message: 'Falha em obter filmes',
+      message: 'Falha em obter eventos',
       status: error?.response.status,
     };
   }
 };
 
-export const useMovies = () => {
+export const useEvents = () => {
   const {
-    data: movies,
-    isLoading: isLoadingMovies,
+    data: events,
+    isLoading: isLoadingEvents,
     isError,
-  } = useQuery(['movies'], () => getMovies());
-  return { movies, isLoadingMovies };
+  } = useQuery(['events'], () => getEvents());
+  return { events, isLoadingEvents };
 };
 
-export const postCreateMovie = async (params: IMovies) => {
+export const postCreateMovie = async (params: IEvents) => {
     try {
       const data = await axiosConnection.post('/movies', params);
      

@@ -1,8 +1,7 @@
-package br.com.ada.adaflix.service;
+package br.com.ada.adafest.service;
 
-import br.com.ada.adaflix.model.Evento;
-import br.com.ada.adaflix.model.Usuario;
-import br.com.ada.adaflix.repository.UsuarioRepository;
+import br.com.ada.adafest.model.Usuario;
+import br.com.ada.adafest.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package br.com.ada.adaflix;
+package br.com.ada.adafest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication
-public class AdaflixApplication {
+public class AdaFestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AdaflixApplication.class, args);
+		SpringApplication.run(AdaFestApplication.class, args);
 	}
 
 	@RequestMapping("/v1/hello-world")
