@@ -20,14 +20,14 @@ export const CompanyCards =() => {
         <Flex justifyContent="center" > <Text fontSize="32px">Empresas Parceiras</Text></Flex>
        
        <Flex justifyContent={"space-between"} gap="16px" >
-        {logos.slice(2,logos.length - 1).map((data, index) => (
-            <>
+        {logos.slice(0,4).map((data, index) => (
+            <Flex key={index}>
            {data !== null && 
-            <Flex key={index}  border="1px solid" borderRadius="16px"  h="150px" cursor="pointer" >
+            <Flex   border="1px solid" borderRadius="16px"  h="150px" cursor="pointer" >
                  <Image objectFit="fill"  w="300px"  borderRadius="16px" src={`${data}`} />
             
             </Flex>}
-            </>
+            </Flex>
         ))}
         <Flex border="1px solid" w="300px" h="150px" borderRadius="16px" justifyContent="center" direction="column" cursor="pointer">
             <Flex alignItems="center" justifyContent="center"  px="48px">

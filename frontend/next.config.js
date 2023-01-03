@@ -5,6 +5,7 @@ const nextConfig = {
   swcMinify: true,
   env: {
     BASE_URL: process.env.BASE_URL,
+    CEP_URL: process.env.CEP_URL
   },
   webpack(config) {
     config.module.rules.push({

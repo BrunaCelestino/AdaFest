@@ -1,16 +1,13 @@
 import { Stack } from "@chakra-ui/react";
 import { NextPage } from "next"
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import { Homepage } from "../components/Home";
 
 
 const Home: NextPage = () => {
     return (
-        <Stack w="100vw">
-            <Header />
+        <Stack w="100vw"  minH="calc(100vh - 204px)">
             <Homepage />
-            <Footer />
+           
         </Stack>
     )
 }

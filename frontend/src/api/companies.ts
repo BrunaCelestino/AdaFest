@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { axiosConnection } from './axios-instance';
+import { IEmpresa } from './interfaces/events';
 
 export const getCompanies = async () => {
   try {
@@ -25,4 +26,23 @@ export const useCompanies = () => {
       isError,
     } = useQuery(['companies'], () => getCompanies());
     return { companies, isLoadingCompanies };
+  };
+
+  export const postCreateCompany = async (params: IEmpresa) => {
+    try {
+      const data = await axiosConnection.post('/empresas', params);
+     
+      
+      return {
+        status: data.status,
+        message: 'Sucesso em registrar empresa',
+        data: data.data as IEmpresa,
+      };
+    } catch (error: any) {
+
+      return {
+        message: 'Falha registrar empresa',
+        status: 500,
+      };;
+    }
   };

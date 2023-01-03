@@ -15,7 +15,7 @@ export interface IEvents {
 }
 
 export interface IEmpresa {
-	id: number,
+	id?: number,
     nome: string,
 	cnpj: string,
 	endereco: IEndereco,
@@ -23,10 +23,11 @@ export interface IEmpresa {
 	email: string,
 	tag: string,
 	logo: string,
+	senha: string
 }
 
 export interface IEndereco {
-	id: number,
+	id?: number,
 	cep: string,
 	logradouro: string,
 	numero: string,

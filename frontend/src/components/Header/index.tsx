@@ -1,6 +1,7 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { DynamicIcon } from "../DynamicIcon";
+import { LoginModal } from "../LoginModal";
 
 export default function Header() {
     const router = useRouter();
@@ -12,10 +13,7 @@ export default function Header() {
                 </Text>
                 </Flex>
             <Flex  justifyContent="end" alignItems="center" w="100%" gap="12px" pr="8px" >
-                <Flex gap="4px" cursor="pointer">
-                    <DynamicIcon w="20px" h="20px"icon="person"/>
-                    <Text>Login</Text>
-                </Flex>
+                <LoginModal/>
                 <Flex gap="4px" cursor="pointer">
                     <DynamicIcon w="20px" h="20px"icon="cart"/>
                     <Text>Carrinho</Text>
