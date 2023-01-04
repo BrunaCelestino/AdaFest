@@ -37,5 +37,15 @@ public class UsuarioService {
         return usuarios;
     }
 
+    public List<Usuario> buscarPorEmail(String email) {
+        Iterable<Usuario> usuarioList = usuarioRepository.findAll();
+        List<Usuario> usuarios = new ArrayList<>();
+        usuarioList.forEach(usuario -> {
+            if (usuario.getEmail().equals(email)) {
+                usuarios.add(usuario);
+            }
+        });
+        return usuarios;
+    }
 
 }

@@ -21,6 +21,8 @@ public class Usuario {
     private String senha;
     private String telefone;
 
+    private String foto;
+
 
     public Long getId() {
         return id;
@@ -76,5 +78,13 @@ public class Usuario {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }

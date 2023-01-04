@@ -18,7 +18,8 @@ export const EventCards = () => {
             </Flex>
             <Flex justifyContent="space-between">
             {!events.isLoadingEvents && sortEventsByDate(events.events?.data as IEvents[]).slice(0,4).map((data, i)=> (
-            <Flex key={i}><Flex cursor="pointer" borderRadius="16px" border="1px solid #E3E5E5" w="270px" direction="column" >
+            <Flex key={i}
+            onClick={()=> router.push(`/todos-eventos/${data.id}`)}><Flex cursor="pointer" borderRadius="16px" border="1px solid #E3E5E5" w="270px" direction="column" >
                     <Image objectFit="fill" borderRadius="16px 16px 0px 0px" h="150px" w="300px" src={`${data.banner}`} />
                     <Flex justifyContent="center" p="8px">
                         <Text color="black" fontWeight="solid">

@@ -35,4 +35,8 @@ public class EmpresaController {
         return empresaService.buscarPorNome(nome);
     }
 
+    @GetMapping("/empresas/empresa")
+    public List<Empresa> buscarPorEmail(@RequestParam String email) {
+        return empresaService.buscarPorEmail(email);
+    }
 }

@@ -1,4 +1,5 @@
 import { Flex, Grid, GridItem, Text, Image, Divider } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { useEvents } from "../../api/events";
 import { IEvents } from "../../api/interfaces/events";
 import { DynamicIcon } from "../../components/DynamicIcon";
@@ -8,6 +9,7 @@ import { sortEventsByDate } from "../../utils/sortData";
 export default function AllEvents() {
 
     const events = useEvents();
+    const router = useRouter();
 
     
 
@@ -18,7 +20,7 @@ export default function AllEvents() {
             </Flex>
             <Grid templateColumns='repeat(4, 1fr)' gap={4}>
             {!events.isLoadingEvents && sortEventsByDate(events.events?.data as IEvents[]).map((data, i)=> (
-            <GridItem key={i} justifyContent="center">
+            <GridItem key={i} justifyContent="center" onClick={()=> router.push(`/todos-eventos/${data.id}`)}>
                 <Flex cursor="pointer" borderRadius="16px" border="1px solid #E3E5E5" maxW="270px" direction="column" >
                     <Image objectFit="fill" borderRadius="16px 16px 0px 0px" h="150px" w="300px" src={`${data.banner}`} />
                     <Flex justifyContent="center" p="8px">

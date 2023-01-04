@@ -15,7 +15,7 @@ export interface IEvents {
 }
 
 export interface IEmpresa {
-	id?: number,
+	id?: string,
     nome: string,
 	cnpj: string,
 	endereco: IEndereco,

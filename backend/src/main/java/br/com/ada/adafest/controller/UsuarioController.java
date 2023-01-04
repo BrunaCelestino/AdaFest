@@ -35,5 +35,10 @@ import java.util.List;
     public List<Usuario> buscarPorParametros(@RequestParam String nome) {
         return usuarioService.buscarPorNome(nome);
     }
+
+    @GetMapping("/usuarios/usuario")
+    public List<Usuario> buscarPorEmail(@RequestParam String email) {
+        return usuarioService.buscarPorEmail(email);
+    }
     }
 

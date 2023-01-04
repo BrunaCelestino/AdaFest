@@ -46,3 +46,35 @@ export const useCompanies = () => {
       };;
     }
   };
+
+  export const getCompanyByEmail = async (email: string) => {
+    try {
+      const data = await axiosConnection.get(`/empresas/empresa?email=${email}`);
+      return {
+        status: data.status,
+        message: 'Sucesso em obter empresa',
+        data: data.data,
+      };
+    } catch (error: any) {
+      return {
+        message: 'Falha em obter empresa',
+        status: 500,
+      };
+    }
+  };
+
+  export const getCompanyByID = async (id: string) => {
+    try {
+      const data = await axiosConnection.get(`/empresas/${id}`);
+      return {
+        status: data.status,
+        message: 'Sucesso em obter empresa',
+        data: data.data,
+      };
+    } catch (error: any) {
+      return {
+        message: 'Falha em obter empresa',
+        status: 500,
+      };
+    }
+  };

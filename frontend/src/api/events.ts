@@ -42,28 +42,28 @@ export const postCreateMovie = async (params: IEvents) => {
     }
   };
 
-  export const getMovieById = async (id: string) => {
+  export const getEventById = async (id: string) => {
     try {
-      const data = await axiosConnection.get(`/${id}`);
+      const data = await axiosConnection.get(`/eventos/${id}`);
       return {
         status: data.status,
-        message: 'Sucesso em obter filme',
+        message: 'Sucesso em obter evento',
         data: data.data,
       };
     } catch (error: any) {
       return {
         data: [],
-        message: 'Falha em obter filme',
+        message: 'Falha em obter evento',
         status: error?.response.status,
       };
     }
   };
 
-  export const useMovieId = (id: string) => {
+  export const useEventId = (id: string) => {
     const {
-      data: movies,
-      isLoading: isLoadingMovies,
+      data: event,
+      isLoading: isLoadingEvent,
       isError,
-    } = useQuery(['movie'], () => getMovieById(id));
-    return { movies, isLoadingMovies };
+    } = useQuery(['event'], () => getEventById(id));
+    return { event, isLoadingEvent };
   };

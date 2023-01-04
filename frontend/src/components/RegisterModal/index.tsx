@@ -31,6 +31,8 @@ export const RegisterModal = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [link, setLink] = useState('');
+    const [photo, setPhoto] = useState('');
+
 
     async function handleSearch(cep: string) {
         cep = cep.replace("-", "")
@@ -71,7 +73,8 @@ export const RegisterModal = () => {
                 },
                 email: email,
                 senha: password,
-                telefone: phone
+                telefone: phone,
+                foto: photo
             }
         const createUser = await postCreateUser(newRegister)
         if(createUser.status === 200) {
@@ -111,7 +114,6 @@ export const RegisterModal = () => {
 
        
         const createCompany = await postCreateCompany(newRegister)
-        console.log(createCompany)
         if(createCompany.status === 200) {
             toast({
                 title: `Cadastro realizado com sucesso!`,
@@ -241,7 +243,7 @@ export const RegisterModal = () => {
                                 />
                             </InputGroup>
                         </Flex>
-                        {loginType === "2" && <Input
+                        {loginType === "2" ? <Input
                         mb="16px"
                                 placeholder="Link Logo"
                                 type="text"
@@ -252,6 +254,18 @@ export const RegisterModal = () => {
                                 value={link}
                                 _hover={{ bgColor: 'white' }}
                                 onChange={(e) => setLink(e.target.value)}
+                            /> : 
+                            <Input
+                        mb="16px"
+                                placeholder="Link Foto de Perfil"
+                                type="text"
+                                border="1px solid"
+                                focusBorderColor="#00355B"
+                                bgColor={'white'}
+                                // borderColor={validateLogin ? 'error.base' : value.length > 2 ? 'neutral.dark' : 'neutral.base'}
+                                value={photo}
+                                _hover={{ bgColor: 'white' }}
+                                onChange={(e) => setPhoto(e.target.value)}
                             />}
                         <Text>Endereço</Text>
                         <Flex gap="16px" mb="16px">

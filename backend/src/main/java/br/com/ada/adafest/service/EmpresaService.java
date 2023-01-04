@@ -38,4 +38,15 @@ public class EmpresaService {
         });
         return empresas;
     }
+
+    public List<Empresa> buscarPorEmail(String email) {
+        Iterable<Empresa> empresaList = empresaRepository.findAll();
+        List<Empresa> empresas = new ArrayList<>();
+        empresaList.forEach(empresa -> {
+            if (empresa.getEmail().equals(email)) {
+                empresas.add(empresa);
+            }
+        });
+        return empresas;
+    }
 }

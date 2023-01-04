@@ -1,4 +1,5 @@
 export interface IUser {
+    id?: string,
     nome: string,
     dataNascimento: string,
     endereco: {
@@ -11,5 +12,6 @@ export interface IUser {
     },
     email: string,
     senha: string,
-    telefone: string
+    telefone: string,
+    foto: string,
 }
