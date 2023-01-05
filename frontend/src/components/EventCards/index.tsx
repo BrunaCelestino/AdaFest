@@ -9,6 +9,8 @@ import { DynamicIcon } from "../DynamicIcon"
 export const EventCards = () => {
 
     const events = useEvents();
+
+    console.log(events.events?.data[0].empresa)
     const router = useRouter();
 
     return (

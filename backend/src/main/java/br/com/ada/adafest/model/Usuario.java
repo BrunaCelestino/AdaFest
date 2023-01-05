@@ -1,5 +1,6 @@
 package br.com.ada.adafest.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -17,8 +18,10 @@ public class Usuario {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id")
     private Endereco endereco;
+    @Column(unique = true)
     private String email;
     private String senha;
+    @Column(unique = true)
     private String telefone;
 
     private String foto;

@@ -10,11 +10,17 @@ public class Empresa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+
+    @Column(unique = true)
     private String cnpj;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id")
     private Endereco endereco;
+
+    @Column(unique = true)
     private String telefone;
+
+    @Column(unique = true)
     private String email;
     private String senha;
     private String tag;

@@ -2,6 +2,7 @@ package br.com.ada.adafest.service;
 
 import br.com.ada.adafest.model.Usuario;
 import br.com.ada.adafest.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.List;
 
 @Service
 public class UsuarioService {
-
+    @Autowired
     private final UsuarioRepository usuarioRepository;
 
     public UsuarioService(UsuarioRepository usuarioRepository) {

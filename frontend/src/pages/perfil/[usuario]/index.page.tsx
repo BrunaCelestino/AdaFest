@@ -2,11 +2,14 @@ import { Flex, Stack, Image, Text, Divider } from "@chakra-ui/react";
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { IUser } from "../../../api/interfaces/users";
+import { useTickets } from "../../../api/tickets";
 import { getUserByID } from "../../../api/users";
 import UFs from "../../../utils/UFs.json"
 export default function Profile() {
     const [user, setUser] = useState<IUser>()
 
+    const ticketList = useTickets()
+    console.log(ticketList)
     const getUser = async () => {
         const id = localStorage.getItem("id")
         if (id !== null) {

@@ -2,6 +2,7 @@ package br.com.ada.adafest.service;
 
 import br.com.ada.adafest.model.Endereco;
 import br.com.ada.adafest.repository.EnderecoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,6 +10,8 @@ import java.util.List;
 
 @Service
 public class EnderecoService {
+
+    @Autowired
     private final EnderecoRepository enderecoRepository;
 
     public EnderecoService(EnderecoRepository enderecoRepository) {
